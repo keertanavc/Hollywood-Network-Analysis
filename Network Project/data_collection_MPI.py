@@ -3,7 +3,7 @@ import time
 from mpi4py import MPI
 import omdb
 
-API_KEYS = ['602a4544', '9f67b61b', '810d1060', 'e21ca34a', '8e12167e']
+API_KEYS = list(pd.read_csv('keys.csv', header=False))
 file = "ids.csv"
 ids = list(pd.read_csv(file)['IDS'])
 data_list = [None] * len(ids)
