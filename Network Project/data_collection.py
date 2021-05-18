@@ -19,7 +19,7 @@ def main():
     # Gather data
     use_ids = ids[use_ids_start:use_ids_end]
     output_filename = 'data_d10.json'
-    API_KEYS = ['daac658', '1535c3e6', '602a4544', '9f67b61b', '810d1060', 'e21ca34a', '8e12167e']
+    API_KEYS = list(pd.read_csv('keys.csv', header=False))
     API_KEY = API_KEYS[0]
     omdb_api_call(use_ids, API_KEY, output_filename)
 
